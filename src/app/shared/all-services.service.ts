@@ -11,7 +11,8 @@ import { map } from 'rxjs/operators';
 })
 export class AllServicesService {
   constructor(private http: Http) { }
-
+  isLoggedin: boolean = false;
+  
   login(email: string, password: string) {
        return this.http.post(myGlobals.Login,{ email: email, password: password });
   }
@@ -19,4 +20,16 @@ export class AllServicesService {
   logout() {
     localStorage.removeItem('userToken');
 }
+
+isLoggedIn() {
+  
+  if (localStorage.getItem("userToken") == null) {
+      this.isLoggedin = false;
+      return this.isLoggedin;
+  }
+  else {
+      return true;
+  }
+}
+
 }
