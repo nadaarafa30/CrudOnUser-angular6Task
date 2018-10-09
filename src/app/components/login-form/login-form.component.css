@@ -91,3 +91,17 @@
     font-size: 12px;
     margin: 10px 0px;
 }
+@media only screen and (max-width: 450px) {
+    .imageblock{
+        display: none;
+    }
+    .loginPart {
+        width: 100%;
+        float: right;
+        padding: 15px;
+        padding-top: 10px;
+     }
+     .mainloginForm{
+        height: 400px;
+     }
+}

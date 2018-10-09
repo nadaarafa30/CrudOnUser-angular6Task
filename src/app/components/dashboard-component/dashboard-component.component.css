@@ -50,9 +50,110 @@
     display: inline-block;
 }
 .listUsers{
-    height: 650px;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     margin: 30px 0px;
+    padding: 10px;
+}
+.AvatarImg{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 1px transparent;
+        overflow: hidden;
+        float: left;
+        margin-top: 7px;
+}
+.AvatarImg img{
+    width: 100%;
+}
+.Name{
+  float: left;
+  margin-top: 24px;
+  margin-left: 10px;
+}
+.Name h3{
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+    margin: 0px;
+}
+.item{
+    border-bottom: solid 1px lightgray;
+    padding: 10px;
+    margin: 10px;
+    height: 85px;
+}
+.item:hover{
+    background-color: rgba(142, 68, 173, 0.05);
+    cursor: pointer;
+}
+.managementBtns{
+    float: right;
+    margin-top: 16px;
+}
+.arrow{
+    background-image: url("../../../assets/images/icons-right.png");
+    width: 9px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+.box{
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: solid 1px #8e44ad;
+    margin: 0px 10px;
+}
+.box img{
+    margin: 7px 8px;
+}
+.LoadMore span{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.LoadMore span:nth-child(2){
+    height: 18px;
+    font-family: Heebo;
+    font-size: 14px;
+    color: #8e44ad;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.LoadMore{
+    margin-top: 13px;
+}
+@media only screen and (max-width: 860px) {
+    .breadCrum{
+        margin-left: 10px;
+    }
+    .newUser{
+        margin: 30px 15px 0px 0px;
+    }
+    .item{
+        padding: 0px;
+        margin: 0px;
+    }
+    .box{
+        margin: 0px 3px;
+    }
+    .arrow{
+        margin-left: 5px;
+        margin-right: 3px;
+        margin-top: 7px;
+    }
 }

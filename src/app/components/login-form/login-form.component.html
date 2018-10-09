@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="model.password" #password="ngModel"
-                              />
+                             [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
                             <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
                                 <div *ngIf="password.errors.required">Password is required</div>
                                 <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>

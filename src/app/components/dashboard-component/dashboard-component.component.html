@@ -7,8 +7,20 @@
 </div>
 <div class="container"> 
   <div class="col-xs-12">
-      <div class="listUsers">
-          
+      <div class="listUsers" *ngIf="allUsers.length>0">
+          <div class="item" *ngFor="let user of allUsers; let i = index">
+            <div class="AvatarImg"><img [src]="user.avatar"></div>
+            <div class="Name"><h3>{{user.first_name}} {{user.last_name}}</h3></div>
+            <div class="managementBtns">
+             <span class="arrow"></span>
+             <span class="box"><img src="../../../assets/images/icons-delete.png"></span>
+             <span class="box"><img src="../../../assets/images/icons-edit.png"></span>
+            </div>
+          </div>
+          <div class="LoadMore" *ngIf="pageNumber<totalusers">
+              <span class="loadIcon"><img src="../../../assets/images/icons-spinner.png"></span>     
+              <span (click)="loadMore()">Loading more users</span>         
+          </div>
       </div>
   </div>
 </div>
