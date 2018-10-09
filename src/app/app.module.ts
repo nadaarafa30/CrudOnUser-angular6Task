@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from 'src/app/app-routing/app-routing.module';
 import { MainHeaderComponentComponent } from './components/main-header-component/main-header-component.component';
 import { MainFooterComponentComponent } from './components/main-footer-component/main-footer-component.component';
-
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponentComponent,
-    MainFooterComponentComponent
+    MainFooterComponentComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

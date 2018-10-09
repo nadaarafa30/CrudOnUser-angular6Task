@@ -1,19 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginFormComponent } from 'src/app/components/login-form/login-form.component';
 
 const routes: Routes = [
-  // {
-  //   path: '', canActivate: [AuthGuard], children: [
-  //     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  //     { path: 'dashboard', component: DeliveryRequestDetailsFormComponent },
-  //     { path: 'table', component: EquipmentRequestDetailsTableComponent }
-  //   ]
-  // },
-  // {
-  //   path: 'login', component: UserComponent,
-  //   children: [{ path: '', component: SignInComponent }]
-  // }
+
+  {
+    path: 'login', component: LoginFormComponent
+  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 @NgModule({
   exports: [RouterModule],

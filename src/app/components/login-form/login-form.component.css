@@ -1,0 +1,93 @@
+.mainloginForm{
+    height: 567px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin: 30px;
+
+}
+.imageblock{
+    width:40%;
+    background-image: url("../../../assets/images/rectangle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: inline-block;
+}
+.loginPart{
+    width: 60%;
+    height: 100%;
+    float: right;
+    padding: 15px;
+    padding-top: 135px;
+}
+.loginPart .welcome{
+    font-family: Heebo;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+}
+.message{
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+}
+.message .colored{
+    color: #8e44ad;
+}
+.forgetPass{
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8e44ad;
+}
+.loginPart label{
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+}
+.loginPart form{
+    margin-top: 25px;
+}
+.loginPart .submitbtn{
+    float: right;
+    width: 94px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #8e44ad;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.btn.submitbtn:focus {
+    outline: unset !important;
+}
+.invalid-feedback{
+    color: red;
+    font-size: 12px;
+    margin: 10px 0px;
+}

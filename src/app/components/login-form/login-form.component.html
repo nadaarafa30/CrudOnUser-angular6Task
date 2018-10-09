@@ -1,0 +1,36 @@
+<div class="col-xs-12 col-md-10 col-md-offset-1">
+  <div class="mainloginForm">
+     <div class="imageblock">
+     </div>
+     <div class="loginPart">
+        <h3 class="welcome">Welcome back!</h3>
+        <p class="message">
+          Please login to access your<span class="colored"> Spaces </span>Dashboard
+        </p>
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label for="Username">User name</label>
+              <input type="text" class="form-control" placeholder="Username" name="Username" [(ngModel)]="model.Username" #Username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Username.invalid }" required />
+              <div *ngIf="f.submitted && Username.invalid" class="invalid-feedback">
+                  <div *ngIf="Username.errors.required">User name is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+              <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                  <div *ngIf="password.errors.required">Password is required</div>
+                  <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+          </div>
+
+        <div class="form-group">
+            <span class="forgetPass">Forgot password?</span>
+            <button class="btn submitbtn">LOGIN</button>
+         </div>
+
+      </form>
+        
+     </div>
+  </div>
+</div>
