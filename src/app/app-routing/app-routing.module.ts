@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from 'src/app/components/login-form/login-form.component';
 import { GaurdsGuard } from 'src/app/shared/gaurds.guard';
-import { MainFooterComponentComponent } from 'src/app/components/main-footer-component/main-footer-component.component';
+import { DashboardComponentComponent } from 'src/app/components/dashboard-component/dashboard-component.component';
 
 const routes: Routes = [
 
@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'login', component: LoginFormComponent
   },
   {
-    path: 'home', component: MainFooterComponentComponent,canActivate: [GaurdsGuard]
+    path: 'home', component: DashboardComponentComponent,canActivate: [GaurdsGuard]
     
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },

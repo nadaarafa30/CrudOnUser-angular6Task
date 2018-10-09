@@ -1,0 +1,58 @@
+.secondHeader{
+    height: 102px;
+    width: 100%;
+    background-color: #dedede;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.breadCrum{
+     float: left;
+     margin-left: 135px;
+}
+.breadCrum h2{
+    height: 44px;
+    font-family: Heebo;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+    margin-top: 10px;
+}
+.newUser{
+    float: right;
+    width: 115px;
+    height: 40px;
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 47px 135px 0px 0px;
+    border-radius: 20px;
+    background-color: #8e44ad;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.breadCrum span{
+    font-family: Heebo;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8e44ad;
+    margin-top: 15px;
+    display: inline-block;
+}
+.listUsers{
+    height: 650px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin: 30px 0px;
+}

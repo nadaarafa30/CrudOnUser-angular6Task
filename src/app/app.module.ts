@@ -8,13 +8,18 @@ import { MainFooterComponentComponent } from './components/main-footer-component
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,BaseRequestOptions } from '@angular/http';
+import { DashboardComponentComponent } from './components/dashboard-component/dashboard-component.component';
+import { AlertsComponent } from './shared/alerts/alerts.component';
+import { AlertservService } from 'src/app/shared/alertServices/alertserv.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHeaderComponentComponent,
     MainFooterComponentComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    DashboardComponentComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { HttpModule,BaseRequestOptions } from '@angular/http';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AlertservService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
