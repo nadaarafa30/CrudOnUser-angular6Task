@@ -10,7 +10,7 @@
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
           <div class="form-group">
               <label for="Username">User name</label>
-              <input type="text" class="form-control" placeholder="Username" name="Username" [(ngModel)]="model.Username" #Username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Username.invalid }" required />
+              <input type="text" class="form-control" placeholder="Username" name="Username" [(ngModel)]="model.email" #Username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Username.invalid }" required />
               <div *ngIf="f.submitted && Username.invalid" class="invalid-feedback">
                   <div *ngIf="Username.errors.required">User name is required</div>
               </div>

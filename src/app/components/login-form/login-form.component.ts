@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AllServicesService } from 'src/app/shared/all-services.service';
 
 @Component({
   selector: 'app-login-form',
@@ -8,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class LoginFormComponent implements OnInit {
   model: any = {};
   
-  constructor() { }
+  constructor(public AllService:AllServicesService) { }
 
   ngOnInit() {
   }  
     onSubmit() {
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
+      this.AllService.login(this.model.email,this.model.password).subscribe((data : any)=>{
+        localStorage.setItem('userToken',data.json().token);
+        console.log("you loggedIn: " + data.json().token )
+      },
+      (err)=>{
+        console.log(err);
+      });
     }
 
 }
