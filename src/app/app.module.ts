@@ -11,6 +11,7 @@ import { HttpModule,BaseRequestOptions } from '@angular/http';
 import { DashboardComponentComponent } from './components/dashboard-component/dashboard-component.component';
 import { AlertsComponent } from './shared/alerts/alerts.component';
 import { AlertservService } from 'src/app/shared/alertServices/alertserv.service';
+import { AddEditUserComponent } from './components/dashboard-component/add-edit-user/add-edit-user.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AlertservService } from 'src/app/shared/alertServices/alertserv.service
     MainFooterComponentComponent,
     LoginFormComponent,
     DashboardComponentComponent,
-    AlertsComponent
+    AlertsComponent,
+    AddEditUserComponent
   ],
   imports: [
     BrowserModule,
