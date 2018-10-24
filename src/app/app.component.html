@@ -1,9 +1,11 @@
+<div *ngIf="serv.isLoad()" class="dimmedLayer"></div>
+<img class="loadingIcon" *ngIf="serv.isLoad()" src="./../assets/images/Loading_icon.gif"/>
 <header>
     <app-main-header-component></app-main-header-component>
 </header>
-            <app-alerts class="alertInfo"></app-alerts>
-            <router-outlet ></router-outlet>
-            
+<app-alerts class="alertInfo"></app-alerts>
+<router-outlet></router-outlet>
+
 <!-- <footer>
     <app-main-footer-component></app-main-footer-component>
 </footer> -->

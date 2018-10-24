@@ -12,6 +12,8 @@ import { map } from 'rxjs/operators';
 export class AllServicesService {
   constructor(private http: Http) { }
   isLoggedin: boolean = false;
+  isloading=false;
+
 
   login(email: string, password: string) {
     return this.http.post(myGlobals.Login, { email: email, password: password });
@@ -33,6 +35,12 @@ export class AllServicesService {
     else {
       return true;
     }
+  }
+  ChangeLoading(boolean){
+    this.isloading=boolean;
+  }
+  isLoad(){
+    return this.isloading;
   }
 
 }

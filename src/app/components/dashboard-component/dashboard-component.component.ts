@@ -16,6 +16,7 @@ export class DashboardComponentComponent implements OnInit {
    totalusers=0;
   
    ngOnInit() {
+    this.APIs.ChangeLoading(true);
     this.GetAllUsers(this.pageNumber);
    }
 
@@ -27,8 +28,11 @@ export class DashboardComponentComponent implements OnInit {
       console.log(this.allUsers);
       console.log('Total: '+this.totalusers);
       console.log('Page Num: '+this.pageNumber);
+      this.APIs.ChangeLoading(false);
+
     },
     (err)=>{
+      this.APIs.ChangeLoading(false);
       this.alertService.error(err.json().error);
     });
   }

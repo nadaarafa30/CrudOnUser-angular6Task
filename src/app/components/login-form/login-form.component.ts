@@ -17,15 +17,19 @@ export class LoginFormComponent implements OnInit {
     this.AllService.logout();
   }  
     onSubmit() {
+      this.AllService.ChangeLoading(true);
       this.AllService.login(this.model.email,this.model.password).subscribe((data : any)=>{
         localStorage.setItem('userToken',data.json().token);
         this.alertService.success("You are Logged In Now");
         this.router.navigate(['/home']);
+        this.AllService.ChangeLoading(false);
+
       },
       (err)=>{
         console.log(err.json());
         this.alertService.error(err.json().error);
-        
+        this.AllService.ChangeLoading(false);
+
       });
     }
 

@@ -12,6 +12,7 @@ import { DashboardComponentComponent } from './components/dashboard-component/da
 import { AlertsComponent } from './shared/alerts/alerts.component';
 import { AlertservService } from 'src/app/shared/alertServices/alertserv.service';
 import { AddEditUserComponent } from './components/dashboard-component/add-edit-user/add-edit-user.component';
+import { AllServicesService } from './shared/all-services.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { AddEditUserComponent } from './components/dashboard-component/add-edit-
     FormsModule,
     HttpModule
   ],
-  providers: [AlertservService],
+  providers: [AlertservService,AllServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
